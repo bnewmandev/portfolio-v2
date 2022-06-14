@@ -10,6 +10,9 @@ const nextConfig = {
 		domains: ["media.graphassets.com"],
 		formats: ["image/avif", "image/webp"],
 	},
+	experimental: {
+		outputStandalone: true,
+	},
 };
 
 module.exports = nextConfig;
