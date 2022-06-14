@@ -1,5 +1,7 @@
 require("dotenv").config();
 
+const withPwa = require("next-pwa");
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
 	reactStrictMode: true,
@@ -14,9 +16,14 @@ const nextConfig = {
 		outputStandalone: true,
 	},
 	i18n: {
-		locales: ["en-UK"],
-		defaultLocale: "en-UK",
+		locales: ["en"],
+		defaultLocale: "en",
+	},
+	pwa: {
+		dest: "public",
+		register: true,
+		skipWaiting: true,
 	},
 };
 
-module.exports = nextConfig;
+module.exports = withPwa(nextConfig);

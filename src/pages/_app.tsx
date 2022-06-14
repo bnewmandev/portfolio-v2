@@ -12,6 +12,7 @@ import type { AppProps } from "next/app";
 
 // Stylesheet Imports
 import "../styles/globals.scss";
+import Head from "next/head";
 
 function MyApp({ Component, pageProps }: AppProps) {
 	const router = useRouter();
@@ -20,6 +21,18 @@ function MyApp({ Component, pageProps }: AppProps) {
 	}, [router.events]);
 	return (
 		<>
+			<Head>
+				<meta charSet="utf-8" />
+				<meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+				<meta
+					name="viewport"
+					content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"
+				/>
+
+				<link rel="manifest" href="/manifest.json" />
+				<link rel="apple-touch-icon" href="/icon.png"></link>
+				<meta name="theme-color" content="#fff" />
+			</Head>
 			<Script
 				strategy="lazyOnload"
 				src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
@@ -34,7 +47,7 @@ function MyApp({ Component, pageProps }: AppProps) {
                     });
                 `}
 			</Script>
-			<Component {...pageProps} />;
+			<Component {...pageProps} />
 		</>
 	);
 }
