@@ -111,6 +111,7 @@ const Article = ({ data }: { data: Post }) => {
 					<div dangerouslySetInnerHTML={html}></div>
 				</div>
 			</header>
+			<Footer />
 		</div>
 	);
 };
