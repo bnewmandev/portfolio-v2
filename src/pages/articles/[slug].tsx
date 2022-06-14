@@ -86,6 +86,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
 		props: {
 			data: response.devDiaryPost,
 		},
+		revalidate: 20,
 	};
 };
 
