@@ -7,7 +7,8 @@
 		"build": "next build",
 		"start": "next start -p $PORT",
 		"lint": "next lint",
-		"deploy": "git push heroku master"
+		"deploy": "git push heroku master",
+		"postbuild": "next-sitemap"
 	},
 	"dependencies": {
 		"@popperjs/core": "^2.11.5",
@@ -19,10 +20,12 @@
 		"graphql": "^16.5.0",
 		"graphql-request": "^4.2.0",
 		"next": "12.1.6",
+		"next-sitemap": "^3.0.5",
 		"react": "18.1.0",
 		"react-dom": "18.1.0",
 		"react-redux": "^8.0.2",
 		"sass": "^1.52.1",
+		"sitemap": "^7.1.1",
 		"ts-dotenv": "^0.8.3"
 	},
 	"devDependencies": {

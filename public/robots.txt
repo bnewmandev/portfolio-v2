@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://bndev.co.uk
+
+# Sitemaps
+Sitemap: https://bndev.co.uk/sitemap.xml
