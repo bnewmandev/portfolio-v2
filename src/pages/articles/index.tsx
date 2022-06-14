@@ -61,6 +61,20 @@ export const getStaticProps: GetStaticProps = async () => {
 };
 
 const Articles: NextPage<ArticlesProps> = ({ devDiaryPosts }) => {
+	devDiaryPosts
+		.sort((a, b) => {
+			const atime = new Date(a.dateOverride || a.createdAt);
+			const btime = new Date(b.dateOverride || b.createdAt);
+			if (atime < btime) {
+				return -1;
+			}
+			if (atime > btime) {
+				return 1;
+			}
+			return 0;
+		})
+		.reverse();
+
 	return (
 		<div id="page-top">
 			<Head>
