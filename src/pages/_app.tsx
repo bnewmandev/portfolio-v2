@@ -33,6 +33,11 @@ function MyApp({ Component, pageProps }: AppProps) {
 				<link rel="apple-touch-icon" href="/icon.png"></link>
 				<meta name="theme-color" content="#fff" />
 			</Head>
+
+			{document.addEventListener("beforeinstallprompt", (e) => {
+				e.preventDefault();
+			})}
+
 			<Script
 				strategy="lazyOnload"
 				src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
