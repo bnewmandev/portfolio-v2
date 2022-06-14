@@ -97,7 +97,8 @@ const Article = ({ data }: { data: Post }) => {
 			<Head>
 				<title>{data.title}</title>
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
-				<meta name="description" content="Portfolio website - Ben Newman" />
+				<meta name="description" content={data.summary} />
+				<link rel="canonical" href={process.env.SITE_URL + "/" + data.slug} />
 			</Head>
 			<Header />
 			<header className="text-center text-black bg-white masthead">

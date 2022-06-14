@@ -33,7 +33,7 @@ const Project: FunctionComponent<ProjectProps> = ({ projectData }) => {
 					</div>
 				</a>
 			</Link>
-			<h1 style={{ textAlign: "center", marginBottom: "50px", fontSize: "24.4px" }}>{projectData.title}</h1>
+			<h2 style={{ textAlign: "center", marginBottom: "50px", fontSize: "24.4px" }}>{projectData.title}</h2>
 		</div>
 	);
 };

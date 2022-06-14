@@ -80,7 +80,11 @@ const Articles: NextPage<ArticlesProps> = ({ devDiaryPosts }) => {
 			<Head>
 				<title>DevDiary - Ben Newman</title>
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
-				<meta name="description" content="Portfolio website - Ben Newman" />
+				<meta
+					name="description"
+					content="Development Diary of my current and past projects. Updates on current projects."
+				/>
+				<link rel="canonical" href={process.env.SITE_URL + "/articles"} />
 			</Head>
 			<Header />
 			<div

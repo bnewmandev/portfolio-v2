@@ -13,6 +13,10 @@ const nextConfig = {
 	experimental: {
 		outputStandalone: true,
 	},
+	i18n: {
+		locales: ["en-UK"],
+		defaultLocale: "en-UK",
+	},
 };
 
 module.exports = nextConfig;

@@ -81,7 +81,11 @@ const Home: NextPage<HomeProps> = ({ about, projects }) => {
 				<Head>
 					<title>Home - Ben Newman</title>
 					<meta name="viewport" content="width=device-width, initial-scale=1" />
-					<meta name="description" content="Portfolio website - Ben Newman" />
+					<meta
+						name="description"
+						content="I'm Ben, and I'm a London, UK based full-stack web developer and software engineer specialising in JavaScript"
+					/>
+					<link rel="canonical" href={process.env.SITE_URL + "/"} />
 				</Head>
 				<Header />
 				<header className="text-center text-white bg-primary masthead">
