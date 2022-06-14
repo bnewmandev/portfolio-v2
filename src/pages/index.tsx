@@ -39,7 +39,7 @@ const QUERY = gql`
 			updatedAt
 			repo
 			content {
-				text
+				html
 			}
 			coverImage {
 				url

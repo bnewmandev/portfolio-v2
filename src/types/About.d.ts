@@ -17,7 +17,7 @@ export interface ProjectI {
 	updatedAt: string;
 	repo: string;
 	content: {
-		text: string;
+		html: string;
 	};
 	coverImage: {
 		url: string;

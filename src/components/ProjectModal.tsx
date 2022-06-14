@@ -36,7 +36,10 @@ const ProjectModal: FunctionComponent<ProjectProps> = ({ projectData }) => {
 											alt={projectData.title}
 										/>
 									</div>
-									<p className="mb-5">{projectData.content.text}</p>
+									<div
+										className="mb-5"
+										dangerouslySetInnerHTML={{ __html: projectData.content.html }}
+									></div>
 									<Link href={projectData.repo}>
 										<a className="btn btn-secondary rounded-pill btn-lg mx-auto">
 											View Project on Github
